@@ -1,34 +1,16 @@
-#include <stdio.h>
-int main()
-{
-    int a[100],n,i,k;
-    printf("Enter size of array: ");
-    scanf("%d",&n);
-    printf("Enter elements of array in sorted order: \n");
-    for(i=0;i<n;i++){
-        scanf("%d",&a[i]);
-    }
-    printf("Enter element you want to search: ");
-    scanf("%d",&k);
-    int l=0,h=n,m=(l+h)/2;
-    while (l<=h)
-    {
-        if (k==a[m])
-        {
-            printf("Found at %d", m);
-            break;
-        }
-        else if (k>a[m])
-        {
-            l=m+1;
-            m=(l+h)/2;
-        }
-        else
-        {
-            h=m-1;
-            m=(l+h)/2;
-        }
-    }
-    if (l>h)
-        printf("Not Found");
-}
+a=[]
+n=int(input("Enter the length of Array: "))
+for i in range (0,n):
+  d=int(input("Enter element: "))
+  a.append(d)
+k=int(input("Enter element you want to search: "))
+c=0
+j=1
+for i in a:
+  if k==i:
+    print("Found at postion",j)
+    c=c+1
+    break
+  else: j=j+1
+if c!=1:
+  print("Not Found")
