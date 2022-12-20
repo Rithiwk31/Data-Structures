@@ -1,16 +1,17 @@
-#include<stdio.h>
-int main(){
-    int a[5]={76,89,12,34,9},n=5,i,j,temp;
-    for (i=1;i<n;i++){
-        temp=a[i];
-        j=i-1;
-        while (j>=0 && a[j]>temp){
-            a[j+1]=a[j];   
-            j--;
-        }
-        a[j+1]=temp  ;  
-        }
-    for(i=0;i<n;i++){
-        printf(" %d",a[i]);
-    }
-}
+a=[]
+n=int(input("Enter the length of Array: "))
+for i in range (0,n):
+  d=int(input("Enter element: "))
+  a.append(d)
+
+for i in range (1,n):
+  p=a[i]
+  j=i-1
+  while j>=0 and a[j]>p:
+      a[j+1]=a[j]
+      j=j-1
+  
+  a[j+1]=p
+
+for i in a:
+  print(i)
